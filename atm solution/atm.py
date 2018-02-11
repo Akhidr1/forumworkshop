@@ -3,69 +3,28 @@
 
 def atm_output(request):
 
-    first_digit = int(str(request)[0])
 
-    k = 0
-
-    while k < first_digit:
+    while request - 100 >= 0:
 
         print ("give 100")
 
-        k = k + 1
+        request = request - 100
 
-    second_digit = int(str(request)[1])
-
-    if second_digit == 5:
+    while request - 50 >= 0:
 
         print ("give 50")
 
-    if second_digit > 5:
+        request = request - 50
 
-        k = 0
+    while request - 10 >= 0:
 
-        print ("give 50")
+        print ("give 10")
 
-        remainder = second_digit - 5
+        request = request - 10
 
-        while k < remainder:
+    if request > 0:
 
-            print ("give 10")
-
-            k = k + 1
-
-    if second_digit < 5:
-
-        k = 0
-
-        while k < second_digit:
-
-            print ("give 10")
-
-            k = k + 1
-
-    third_digit = int(str(request)[2])
-
-    if third_digit == 0:
-        print ""
-
-    else:
-
-        if third_digit == 5:
-
-            print ("give 5")
-
-        if third_digit > 5:
-
-            k = 0
-
-            print ("give 5")
-
-            remainder = third_digit - 5
-
-            print ( "give " + str(remainder))
-
-        if third_digit < 5:
-            print ( "give " + str(remainder))
+        print ("give " + str(request))
 
 
 atm_output(277)
