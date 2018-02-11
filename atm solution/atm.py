@@ -22,6 +22,12 @@ def atm_output(request):
 
         request = request - 10
 
+    while request - 5 >= 0:
+
+        print ("give 5")
+
+        request = request - 5
+
     if request > 0:
 
         print ("give " + str(request))
