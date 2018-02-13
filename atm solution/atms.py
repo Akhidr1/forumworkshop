@@ -8,17 +8,27 @@ class ATM():
 
         result = self.balance
 
-        print ("Current Balance= " + str(self.balance))
+        print ("Welcome to " + self.bank_name)
+        print ("Current Balance= " + str(result))
+
+
+        print ("==================================")
 
         if   request > self.balance:
              print("Can't give you all this money !!")
+             print ("==================================")
+
 
         elif request < 0:
              print("More than zero plz!")
+             print ("==================================")
+
 
         else:
 
             result = self.balance - request
+
+            print ("=>>>>>>>>" +str(result))
 
             while request > 0:
 
@@ -41,23 +51,23 @@ class ATM():
                 elif request < 5:
                     print("give " + str(request))
                     request = 0
+            print ("=>>>>>>>>" +str(result))
+            print ("==================================")
 
 
-        return result
+
+            return result
 
 
 
 balance1 = 500
 balance2 = 1000
 
-atm1 = ATM("balance1"," Smart Bank")
+atm1 = ATM(balance1," Smart Bank")
+atm2 = ATM(balance2," Baraka Bank")
 
-print balance1
+balance1 = atm1.withdraw(277)
+balance1 = atm1.withdraw(800)
 
-atm2 = ATM("balance2"," Baraka Bank")
-
-atm1.withdraw(277)
-#atm1.withdraw(800)
-
-#atm2.withdraw(100)
-#atm2.withdraw(2000)
+balance2 = atm2.withdraw(100)
+balance2 = atm2.withdraw(2000)
