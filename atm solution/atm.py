@@ -1,52 +1,63 @@
-# allowed papers: 100, 50, 10, 5, and rest of request
+class ATM():
 
-def withdraw(balance, request):
+    def __init__(self, balance, bank_name):
+        self.balance = balance
+        self.bank_name = bank_name
 
-    result = balance
+    def withdraw(self, request):
 
-    print ("Current Balance= " + str(balance))
+        result = self.balance
 
-    if   request > balance:
-         print("Can't give you all this money !!")
+        print ("Current Balance= " + str(self.balance))
 
-    elif request < 0:
-         print("More than zero plz!")
+        if   request > self.balance:
+             print("Can't give you all this money !!")
 
-    else:
+        elif request < 0:
+             print("More than zero plz!")
 
-        result = balance - request
+        else:
 
-        while request > 0:
+            result = self.balance - request
 
-            if request >= 100:
-                request = request - 100
-                print ("give 100")
+            while request > 0:
 
-            elif request >= 50:
-                request = request - 50
-                print ("give 50")
+                if request >= 100:
+                    request = request - 100
+                    print ("give 100")
 
-            elif request >= 10:
-                request = request - 10
-                print ("give 10")
+                elif request >= 50:
+                    request = request - 50
+                    print ("give 50")
 
-            elif request >= 5:
-                request = request - 5
-                print ("give 5")
+                elif request >= 10:
+                    request = request - 10
+                    print ("give 10")
 
-            elif request < 5:
-                print("give " + str(request))
-                request = 0
+                elif request >= 5:
+                    request = request - 5
+                    print ("give 5")
 
-
-    return result
-
+                elif request < 5:
+                    print("give " + str(request))
+                    request = 0
 
 
+        return result
 
-balance = 500
 
-balance = withdraw(balance, 277)
-balance = withdraw(balance, 30)
-balance = withdraw(balance, 5)
-balance = withdraw(balance, 500)
+
+balance1 = 500
+balance2 = 1000
+
+atm1 = ATM("balance1"," Smart Bank")
+
+print balance1
+
+atm2 = ATM("balance2"," Baraka Bank")
+
+atm1.withdraw(277)
+#atm1.withdraw(800)
+
+#atm2.withdraw(100)
+#atm2.withdraw(2000)
