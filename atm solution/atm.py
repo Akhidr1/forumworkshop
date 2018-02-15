@@ -11,16 +11,16 @@ class ATM():
         print ("Current Balance = " + str(self.balance))
 
 
-        print ("==================================")
+        print "=" * 30
 
         if   request > self.balance:
              print("Can't give you all this money !!")
-             print ("==================================")
+             print "=" * 30
 
 
         elif request < 0:
              print("More than zero plz!")
-             print ("==================================")
+             print "=" * 30
 
 
         else:
@@ -50,18 +50,18 @@ class ATM():
                 elif request < 5:
                     print("give " + str(request))
                     request = 0
-            print ("==================================")
+            print "=" * 30
 
     def show_withdrawals(self):
 
+        print "-" * 30
+        print self.bank_name + " withdrawals"
+
         for withdrawal in self.withdrawals_list:
-            print ("----------------------------------")
-            print self.bank_name + " withdrawal"
+
             print(withdrawal)
-            print ("----------------------------------")
-            print ("==================================")
-
-
+            print "-" * 30
+        print "=" * 30
 
 
 
@@ -73,9 +73,12 @@ atm1 = ATM(balance1," Smart Bank")
 atm2 = ATM(balance2," Baraka Bank")
 
 atm1.withdraw(277)
+atm1.withdraw(50)
 atm1.show_withdrawals()
 atm1.withdraw(800)
 
+
 atm2.withdraw(100)
+atm2.withdraw(500)
 atm2.show_withdrawals()
 atm2.withdraw(2000)
