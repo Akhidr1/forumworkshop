@@ -12,17 +12,19 @@ post2 = models.Post("Hi!", "First time for me here!")
 post3 = models.Post("Howdy!", "Glad to be on of your community!")
 
 
+member_store = stores.MemberStore()
+post_store = stores.PostStore()
 
-models.MemberStore.add(member1)
-models.MemberStore.add(member2)
+member_store.add(member1)
+member_store.add(member2)
 
-print(models.MemberStore.get_all())
+print member_store.get_all()
 
-models.PostrStore.add(post1)
-models.PostStore.add(post2)
-models.PostStore.add(post3)
 
-print(models.PostStore.get_all())
+post_store.add(post1)
+post_store.add(post2)
+
+print post_store.get_all()
 
 
 

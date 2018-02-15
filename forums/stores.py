@@ -8,7 +8,7 @@ class MemberStore:
 
       for member in MemberStore.members:
 
-            return MemberStore.members
+            return member
 
   def add(self, member):
       # append member
@@ -25,7 +25,7 @@ class PostStore:
 
       for post in PostStore.posts:
 
-            return PostStore.posts
+            return post
 
   def add(self, post):
       # append post
