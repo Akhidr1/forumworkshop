@@ -1,4 +1,5 @@
 import models
+import stores
 
 member1 = models.Member("Ahmed", 20)
 
@@ -22,10 +23,6 @@ models.PostStore.add(post2)
 models.PostStore.add(post3)
 
 print(models.PostStore.get_all())
-
-
-
-
 
 
 
