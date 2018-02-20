@@ -11,6 +11,7 @@ post2 = models.Post("Hi!", "First time for me here!")
 
 post3 = models.Post("Howdy!", "Glad to be on of your community!")
 
+print(post1)
 
 member_store = stores.MemberStore()
 post_store = stores.PostStore()
